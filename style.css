@@ -230,7 +230,7 @@ footer h7{
     
     
     footer{
-        bottom: -10px;
+        bottom: 0px;
         position: absolute;
         --footer_padding: 10rem; /* needed as to change variable since width of footer is calculated based on this var*/
 
