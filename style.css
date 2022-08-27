@@ -227,7 +227,15 @@ footer h7{
         transform: translateX(-50%) translateY(-50%);
     
     }
-    
+    .overlay{
+        height: auto;
+        text-align: center;
+        
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        
+    }
     
     footer{
         bottom: 0px;
