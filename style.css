@@ -1,0 +1,251 @@
+*{
+    margin: 0;
+    padding: 0;    
+    width: 100%;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Poppins", sans-serif;
+}
+
+:root{
+    --grey: #171819;
+    --dark-grey: #222;
+    --cream: #eee;
+    --white: #fff;
+    --orange: #f13a11;
+    --Monotype-Corsiva: 'Monotype Corsiva';
+
+    --nav_bar_ht: 8rem; /* light black part in nav bar*/
+    --nav:12px;
+    --nav_block_padding: 1rem;
+    --logo_padding_left: 1.5rem;
+    --logo_ht: 3rem;
+    --hamburger-padding-rt: 1rem;
+    --heading_padding: 1.8rem; /* a century of... */
+    --heading_font_size: 4rem; /*Intitution...*/
+    --container_padding: 2rem;
+    --button_font_size: 0.8rem;
+    --footer_padding: 1rem;
+    --footer-logo-width: 1.5rem;
+}
+
+body{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #eee;
+}
+
+/* ------------------Navigation Bar---------- */
+nav{
+    height: var(--nav_bar_ht);      
+    width: 100%;
+    background-color: var(--dark-grey);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.logo-container{
+    width: fit-content;
+    display: block;
+}
+
+.logo{
+    height: var(--logo_ht);
+    width: auto;
+    padding-left: var(--logo_padding_left);
+}
+
+.heads h1{
+    color: white;
+    text-align: center;
+    position:relative;
+    margin-top: 12px;
+    font-family: 'OldeEnglish';
+	src:url('fonts/OldeEnglish.woff');
+    font-weight: normal;
+	font-style: normal;
+}
+
+
+
+/* ------------------container common------------------ */
+.container{
+    width: calc(100% - (2 * var(--container_padding)));
+    padding: var(--container_padding);
+}
+.about h3{
+    text-align: center;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 40px;
+}
+
+/* ------------------ Footer ------------------ */
+footer {
+    width: calc(100% - (2 * var(--footer_padding)));
+    padding: var(--footer_padding);
+
+    background-color: #000;
+    color: #fff;
+    font-size:30px;
+    font-weight:bold;
+    bottom: 0%;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+footer h7{
+    display: none;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.tkmce, .ieindia{
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.tkmce a, .ieindia a{
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--white);
+    padding-left: 0.5rem;
+
+}
+
+.tkmce > img, .ieindia > img{
+    display: none;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 1rem;
+}
+
+.social-media{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.social-media h7{
+    display: none;
+    width: fit-content;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.social-media a{
+    width: fit-content;
+}
+
+.social-media a > img{
+    width: var(--footer-logo-width);
+    height: var(--footer-logo-width);
+}
+
+.social-media a > img:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+#fb{    
+    border-radius: calc(var(--footer-logo-width)/2);
+}
+#insta{
+    border-radius: calc(var(--footer-logo-width)/4.29);
+}
+#yt{
+    width: calc(var(--footer-logo-width)/0.71);
+    border-radius: calc(var(--footer-logo-width)/7.5);
+}
+
+/* styles for browsers larger than 600px; */
+
+@media only screen and (min-width: 600px) {
+    
+    nav{
+        height: var(--nav_bar_ht);
+        display: flex;
+        flex-direction: column;
+        text-align: center;            
+        position: fixed;
+        top: 0;
+        z-index: 9999; 
+    }
+    
+    .logo-container{
+       justify-content: space-around;
+    }
+
+    .logo{        
+        --logo_ht: 4.5rem;
+        padding: 0;
+    }
+
+    
+
+    ul{
+        display: flex;
+    }
+ 
+/* ------------------container common------------------ */
+    .container{
+        --container_padding: 12rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        font-size: 3rem;
+    }
+/* ------------------about us------------------ */
+    .about .content{
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+    }
+
+/* ------------------button------------------ */
+
+    .about h3{
+        text-align: center;
+        position:absolute;
+       
+        font-size: .5em;
+        justify-content: center;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    
+    }
+    
+    
+    footer{
+        bottom: 0px;
+        position: absolute;
+        --footer_padding: 6rem; /* needed as to change variable since width of footer is calculated based on this var*/
+        padding: 1.5rem var(--footer_padding);
+    }
+
+    
+    footer h7/* text: copyright */, .social-media h7 /* text: connect */{
+        display: block;
+    }
+
+    .tkmce, .ieindia{
+        display: flex;
+    }
+
+    .tkmce > img, .ieindia > img{
+        display: block;
+    }
+}
