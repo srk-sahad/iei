@@ -30,11 +30,14 @@
 }
 
 body{
-    display: block;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
     background-color: #eee;
+    /* remove before adding more contents */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
 }
 
 /* ------------------Navigation Bar---------- */
@@ -70,20 +73,17 @@ nav{
     font-weight: normal;
 	font-style: normal;
 }
-
-
-
 /* ------------------container common------------------ */
 .container{
     width: calc(100% - (2 * var(--container_padding)));
     padding: var(--container_padding);
 }
+.about{
+    display: flex;
+    align-items: center;
+}
 .about h3{
     text-align: center;
-    position:absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
     font-size: 40px;
 }
 
@@ -96,8 +96,6 @@ footer {
     color: #fff;
     font-size:30px;
     font-weight:bold;
-    bottom: 0%;
-    position: absolute;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -239,9 +237,7 @@ footer h7{
     
     footer{
         bottom: 0px;
-        position: absolute;
-        --footer_padding: 10rem; /* needed as to change variable since width of footer is calculated based on this var*/
-
+        --footer_padding: 6rem; /* needed as to change variable since width of footer is calculated based on this var*/
         padding: 1.5rem var(--footer_padding);
     }
 
